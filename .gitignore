@@ -229,3 +229,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 >>>>>>> 7e8b3ee91f7fcaa9e3692c9aced632e9c73602bc
+
+# env
+.env
