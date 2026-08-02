@@ -1,21 +1,28 @@
 import os
-import tempfile
+import sys
 from datetime import datetime
 import pandas as pd
 import requests
 
+# Ensure package subfolder is added to sys.path for local module imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+
 from airflow.decorators import dag, task
 from airflow.models import Variable
+from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 
-# Import configurations from config.py
+# Config Imports
 from config import (
     DEFAULT_ARGS,
+    AWS_CONN_ID,
     SNOWFLAKE_CONN_ID,
-    SNOWFLAKE_STAGE,
+    S3_BUCKET_NAME,
+    S3_KEY_PREFIX,
     WIKIPEDIA_URL,
     FMP_API_BASE_URL,
-    DEFAULT_FMP_API_KEY,
     HTTP_HEADERS,
     INSERT_FMP_PROFILES_SQL,
 )
@@ -27,52 +34,54 @@ from config import (
     schedule="*/5 * * * *",
     start_date=datetime(2026, 1, 1),
     catchup=False,
-    tags=["fmp", "snowflake", "production"],
+    tags=["fmp", "aws", "s3", "snowflake"],
 )
 def fmp_pipeline():
 
     @task()
     def get_sp500_symbols() -> list:
-        """Task 1: Fetch S&P 500 symbols from Wikipedia."""
+        """Task 1: Fetch S&P 500 symbols dynamically."""
         response = requests.get(WIKIPEDIA_URL, headers=HTTP_HEADERS)
         response.raise_for_status()
 
         tables = pd.read_html(response.text)
         df = tables[0]
-        symbols = df["Symbol"].str.replace(".", "-").tolist()
-        return symbols
+        return df["Symbol"].str.replace(".", "-").tolist()
 
     @task()
     def save_file_into_s3(symbols: list):
-        """Task 2 (Branch A): Upload CSV into Snowflake Stage via PUT command."""
+        """Task 2 (Branch A): Upload CSV into AWS S3 Bucket using S3Hook."""
         df = pd.DataFrame(symbols, columns=["symbol"])
-        file_name = f"sp500_symbols_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        csv_buffer = df.to_csv(index=False)
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            local_file_path = os.path.join(tmpdir, file_name)
-            df.to_csv(local_file_path, index=False)
+        # Dynamic naming and S3 key generation
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = f"sp500_symbols_{timestamp}.csv"
+        s3_key = f"{S3_KEY_PREFIX}/{file_name}"
 
-            snowflake_hook = SnowflakeHook(snowflake_conn_id=SNOWFLAKE_CONN_ID)
-            conn = snowflake_hook.get_conn()
-            cursor = conn.cursor()
+        # Get bucket name from Airflow Variables or config default
+        bucket_name = Variable.get("s3_bucket_name", default_var=S3_BUCKET_NAME)
 
-            put_sql = (
-                f"PUT file://{local_file_path} {SNOWFLAKE_STAGE} AUTO_COMPRESS=FALSE;"
-            )
-            cursor.execute(put_sql)
-
-            cursor.close()
-            conn.close()
+        # Upload string buffer directly to S3 via S3Hook
+        s3_hook = S3Hook(aws_conn_id=AWS_CONN_ID)
+        s3_hook.load_string(
+            string_data=csv_buffer,
+            key=s3_key,
+            bucket_name=bucket_name,
+            replace=True,
+        )
 
         print(
-            f"Successfully uploaded {file_name} to Snowflake Stage {SNOWFLAKE_STAGE}."
+            f"Successfully uploaded {file_name} to S3 bucket s3://{bucket_name}/{s3_key}"
         )
 
     @task()
     def hit_fmp_api(symbols: list) -> list:
         """Task 2 (Branch B): Hit FMP API for company profiles."""
         test_symbols = symbols[:2]
-        api_key = Variable.get("fmp_api_key", default_var=DEFAULT_FMP_API_KEY)
+        api_key = Variable.get(
+            "fmp_api_key", default_var="TGqnPdIo3fJ05arOQYKE7BdpGrosOxpj"
+        )
         profiles = []
 
         for symbol in test_symbols:
@@ -121,7 +130,7 @@ def fmp_pipeline():
         conn.close()
         print(f"Successfully loaded {len(profiles)} records into Snowflake.")
 
-    # Execution Flow
+    # Execution Flow strictly matches your Excalidraw diagram
     symbols = get_sp500_symbols()
     save_file_into_s3(symbols)
     fmp_data = hit_fmp_api(symbols)
