@@ -1,6 +1,6 @@
 import os
 import tempfile
-from datetime import datetime, timedelta
+from datetime import datetime
 import pandas as pd
 import requests
 
@@ -8,31 +8,33 @@ from airflow.decorators import dag, task
 from airflow.models import Variable
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 
-default_args = {
-    "owner": "You",
-    "retries": 2,
-    "retry_delay": timedelta(minutes=2),
-}
+# Import configurations from config.py
+from config import (
+    DEFAULT_ARGS,
+    SNOWFLAKE_CONN_ID,
+    SNOWFLAKE_STAGE,
+    WIKIPEDIA_URL,
+    FMP_API_BASE_URL,
+    DEFAULT_FMP_API_KEY,
+    HTTP_HEADERS,
+    INSERT_FMP_PROFILES_SQL,
+)
 
 
 @dag(
     dag_id="airflow_dag_fmp_data",
-    default_args=default_args,
+    default_args=DEFAULT_ARGS,
     schedule="*/5 * * * *",
     start_date=datetime(2026, 1, 1),
     catchup=False,
-    tags=["fmp", "snowflake"],
+    tags=["fmp", "snowflake", "production"],
 )
 def fmp_pipeline():
 
     @task()
     def get_sp500_symbols() -> list:
-        """Task 1: Fetch S&P 500 symbols from Wikipedia with proper User-Agent header."""
-        url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }
-        response = requests.get(url, headers=headers)
+        """Task 1: Fetch S&P 500 symbols from Wikipedia."""
+        response = requests.get(WIKIPEDIA_URL, headers=HTTP_HEADERS)
         response.raise_for_status()
 
         tables = pd.read_html(response.text)
@@ -46,34 +48,35 @@ def fmp_pipeline():
         df = pd.DataFrame(symbols, columns=["symbol"])
         file_name = f"sp500_symbols_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 
-        # Write to a temp file and use SnowflakeHook with verified snowflake_default connection
         with tempfile.TemporaryDirectory() as tmpdir:
             local_file_path = os.path.join(tmpdir, file_name)
             df.to_csv(local_file_path, index=False)
 
-            snowflake_hook = SnowflakeHook(snowflake_conn_id="snowflake_default")
+            snowflake_hook = SnowflakeHook(snowflake_conn_id=SNOWFLAKE_CONN_ID)
             conn = snowflake_hook.get_conn()
             cursor = conn.cursor()
 
-            put_sql = f"PUT file://{local_file_path} @FINANCIAL_DB.RAW.SP500_STAGE AUTO_COMPRESS=FALSE;"
+            put_sql = (
+                f"PUT file://{local_file_path} {SNOWFLAKE_STAGE} AUTO_COMPRESS=FALSE;"
+            )
             cursor.execute(put_sql)
 
             cursor.close()
             conn.close()
 
-        print(f"Successfully uploaded {file_name} to Snowflake Stage @SP500_STAGE.")
+        print(
+            f"Successfully uploaded {file_name} to Snowflake Stage {SNOWFLAKE_STAGE}."
+        )
 
     @task()
     def hit_fmp_api(symbols: list) -> list:
         """Task 2 (Branch B): Hit FMP API for company profiles."""
         test_symbols = symbols[:2]
-        api_key = Variable.get(
-            "fmp_api_key", default_var="TGqnPdIo3fJ05arOQYKE7BdpGrosOxpj"
-        )
+        api_key = Variable.get("fmp_api_key", default_var=DEFAULT_FMP_API_KEY)
         profiles = []
 
         for symbol in test_symbols:
-            url = f"https://financialmodelingprep.com/stable/profile?symbol={symbol}&apikey={api_key}"
+            url = f"{FMP_API_BASE_URL}?symbol={symbol}&apikey={api_key}"
             response = requests.get(url)
 
             if response.status_code == 200:
@@ -90,23 +93,11 @@ def fmp_pipeline():
             print("No profiles fetched.")
             return
 
-        insert_sql = """
-        INSERT INTO FINANCIAL_DB.RAW.FMP_COMPANY_PROFILES (
-            SYMBOL, PRICE, BETA, VOL_AVG, MARKET_CAP, 
-            COMPANY_NAME, EXCHANGE, INDUSTRY, WEBSITE, DESCRIPTION, CEO, SECTOR, COUNTRY
-        ) VALUES (
-            %(symbol)s, %(price)s, %(beta)s, %(volAvg)s, %(mktCap)s,
-            %(companyName)s, %(exchangeShortName)s, %(industry)s, %(website)s, 
-            %(description)s, %(ceo)s, %(sector)s, %(country)s
-        );
-        """
-
-        snowflake_hook = SnowflakeHook(snowflake_conn_id="snowflake_default")
+        snowflake_hook = SnowflakeHook(snowflake_conn_id=SNOWFLAKE_CONN_ID)
         conn = snowflake_hook.get_conn()
         cursor = conn.cursor()
 
         for profile in profiles:
-            # Safe parsing prevents KeyError issues with variable API payloads
             safe_profile = {
                 "symbol": profile.get("symbol"),
                 "price": profile.get("price"),
@@ -123,7 +114,7 @@ def fmp_pipeline():
                 "sector": profile.get("sector"),
                 "country": profile.get("country"),
             }
-            cursor.execute(insert_sql, safe_profile)
+            cursor.execute(INSERT_FMP_PROFILES_SQL, safe_profile)
 
         conn.commit()
         cursor.close()
