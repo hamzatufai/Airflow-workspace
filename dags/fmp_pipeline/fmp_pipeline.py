@@ -50,14 +50,18 @@ def fmp_pipeline():
 
     @task()
     def save_file_into_s3(symbols: list):
-        """Task 2 (Branch A): Upload CSV into AWS S3 Bucket using S3Hook."""
+        """Task 2 (Branch A): Upload CSV into AWS S3 Bucket with precise sub-second timestamping."""
         df = pd.DataFrame(symbols, columns=["symbol"])
         csv_buffer = df.to_csv(index=False)
 
-        # Dynamic naming and S3 key generation
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # Precise Timestamp format: YYYY_MM_DD_HHMMSS_microseconds
+        # Guarantees unique file names even if runs occur seconds or milliseconds apart
+        now = datetime.now()
+        timestamp = now.strftime("%Y_%m_%d_%H%M%S_%f")
         file_name = f"sp500_symbols_{timestamp}.csv"
-        s3_key = f"{S3_KEY_PREFIX}/{file_name}"
+
+        # Optional: Partitioning by Year/Month/Day in S3 for clean data lake structure
+        s3_key = f"{S3_KEY_PREFIX}/{now.strftime('%Y/%m/%d')}/{file_name}"
 
         # Get bucket name from Airflow Variables or config default
         bucket_name = Variable.get("s3_bucket_name", default_var=S3_BUCKET_NAME)
@@ -130,7 +134,7 @@ def fmp_pipeline():
         conn.close()
         print(f"Successfully loaded {len(profiles)} records into Snowflake.")
 
-    # Execution Flow strictly matches your Excalidraw diagram
+    # Execution Flow
     symbols = get_sp500_symbols()
     save_file_into_s3(symbols)
     fmp_data = hit_fmp_api(symbols)
