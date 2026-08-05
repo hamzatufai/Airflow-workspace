@@ -1,0 +1,448 @@
+[2026-08-03T12:38:43.090+0000] {processor.py:186} INFO - Started process (PID=64) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:38:43.113+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:38:43.133+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:38:43.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:38:43.535+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:38:43.304+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:38:43.550+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:38:44.265+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 1.351 seconds
+[2026-08-03T12:39:14.865+0000] {processor.py:186} INFO - Started process (PID=75) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:14.875+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:39:14.981+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:39:14.980+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:15.049+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:39:15.031+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:39:15.055+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:15.289+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.509 seconds
+[2026-08-03T12:39:45.832+0000] {processor.py:186} INFO - Started process (PID=87) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:45.835+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:39:45.850+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:39:45.848+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:45.901+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:39:45.886+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:39:45.906+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:39:46.091+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.310 seconds
+[2026-08-03T12:40:16.331+0000] {processor.py:186} INFO - Started process (PID=98) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:16.334+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:40:16.338+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:40:16.338+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:16.364+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:40:16.359+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:40:16.366+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:16.398+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.078 seconds
+[2026-08-03T12:40:47.016+0000] {processor.py:186} INFO - Started process (PID=109) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:47.019+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:40:47.025+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:40:47.024+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:47.055+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:40:47.046+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:40:47.058+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:40:47.113+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.111 seconds
+[2026-08-03T12:41:17.217+0000] {processor.py:186} INFO - Started process (PID=120) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:41:17.219+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T12:41:17.222+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:41:17.222+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:41:17.247+0000] {logging_mixin.py:190} INFO - [2026-08-03T12:41:17.241+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T12:41:17.250+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T12:41:17.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.080 seconds
+[2026-08-03T15:10:08.568+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:08.635+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:10:08.687+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:10:08.678+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:09.098+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:10:09.037+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:10:09.118+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:09.831+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 1.439 seconds
+[2026-08-03T15:10:40.438+0000] {processor.py:186} INFO - Started process (PID=95) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:40.456+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:10:40.517+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:10:40.510+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:40.663+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:10:40.637+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:10:40.669+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:10:40.930+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.593 seconds
+[2026-08-03T15:11:11.483+0000] {processor.py:186} INFO - Started process (PID=106) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:11.537+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:11:11.596+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:11:11.595+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:11.749+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:11:11.737+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:11:11.753+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:11.889+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.476 seconds
+[2026-08-03T15:11:42.370+0000] {processor.py:186} INFO - Started process (PID=117) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:42.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:11:42.386+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:11:42.384+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:42.433+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:11:42.421+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:11:42.439+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:11:42.517+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.167 seconds
+[2026-08-03T15:12:13.151+0000] {processor.py:186} INFO - Started process (PID=129) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:12:13.157+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:12:13.182+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:12:13.179+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:12:13.251+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:12:13.234+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:12:13.259+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:12:13.411+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.328 seconds
+[2026-08-03T15:27:58.917+0000] {processor.py:186} INFO - Started process (PID=73) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:27:58.933+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:27:58.984+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:27:58.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:27:59.095+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:27:59.066+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:27:59.099+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:27:59.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.458 seconds
+[2026-08-03T15:28:30.611+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:28:30.636+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:28:30.789+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:28:30.775+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:28:31.060+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:28:30.979+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:28:31.068+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:28:32.675+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 2.206 seconds
+[2026-08-03T15:29:03.349+0000] {processor.py:186} INFO - Started process (PID=101) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:03.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:29:03.381+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:29:03.380+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:03.430+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:29:03.418+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:29:03.437+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:03.576+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.285 seconds
+[2026-08-03T15:29:34.191+0000] {processor.py:186} INFO - Started process (PID=112) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:34.194+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:29:34.200+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:29:34.200+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:34.235+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:29:34.225+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:29:34.240+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:29:34.565+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.389 seconds
+[2026-08-03T15:30:05.535+0000] {processor.py:186} INFO - Started process (PID=123) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:05.538+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:30:05.547+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:30:05.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:05.591+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:30:05.581+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:30:05.596+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:05.657+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.149 seconds
+[2026-08-03T15:30:36.631+0000] {processor.py:186} INFO - Started process (PID=134) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:36.638+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:30:36.657+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:30:36.655+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:36.772+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:30:36.743+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:30:36.780+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:30:37.002+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.464 seconds
+[2026-08-03T15:31:07.645+0000] {processor.py:186} INFO - Started process (PID=146) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:07.650+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:31:07.668+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:31:07.666+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:07.717+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:31:07.704+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:31:07.722+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:07.787+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.179 seconds
+[2026-08-03T15:31:38.517+0000] {processor.py:186} INFO - Started process (PID=158) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:38.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:31:38.560+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:31:38.558+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:38.668+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:31:38.653+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:31:38.675+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:31:38.785+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.326 seconds
+[2026-08-03T15:32:09.257+0000] {processor.py:186} INFO - Started process (PID=169) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:09.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:32:09.278+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:32:09.277+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:09.364+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:32:09.345+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:32:09.375+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:09.673+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.445 seconds
+[2026-08-03T15:32:39.998+0000] {processor.py:186} INFO - Started process (PID=180) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:40.004+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:32:40.025+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:32:40.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:40.079+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:32:40.062+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:32:40.084+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:32:40.184+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.225 seconds
+[2026-08-03T15:33:10.561+0000] {processor.py:186} INFO - Started process (PID=191) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:10.564+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:33:10.572+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:33:10.571+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:10.626+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:33:10.600+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:33:10.634+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:10.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.256 seconds
+[2026-08-03T15:33:41.614+0000] {processor.py:186} INFO - Started process (PID=203) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:41.642+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:33:41.655+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:33:41.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:41.839+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:33:41.817+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:33:41.844+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:33:42.012+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.473 seconds
+[2026-08-03T15:34:12.451+0000] {processor.py:186} INFO - Started process (PID=214) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:12.456+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:34:12.464+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:34:12.463+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:12.504+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:34:12.494+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:34:12.509+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:12.592+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.160 seconds
+[2026-08-03T15:34:42.807+0000] {processor.py:186} INFO - Started process (PID=226) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:42.811+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:34:42.819+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:34:42.818+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:42.857+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:34:42.847+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:34:42.862+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:34:42.918+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.135 seconds
+[2026-08-03T15:35:13.899+0000] {processor.py:186} INFO - Started process (PID=237) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:13.902+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:35:13.910+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:35:13.909+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:13.945+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:35:13.936+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:35:13.949+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:14.027+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.146 seconds
+[2026-08-03T15:35:44.453+0000] {processor.py:186} INFO - Started process (PID=248) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:44.456+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:35:44.470+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:35:44.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:44.514+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:35:44.503+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:35:44.518+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:35:44.581+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.152 seconds
+[2026-08-03T15:36:15.118+0000] {processor.py:186} INFO - Started process (PID=259) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:15.123+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:36:15.133+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:36:15.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:15.181+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:36:15.170+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:36:15.186+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:15.267+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.174 seconds
+[2026-08-03T15:36:46.355+0000] {processor.py:186} INFO - Started process (PID=270) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:46.359+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:36:46.367+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:36:46.366+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:46.414+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:36:46.401+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:36:46.419+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:36:46.482+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.155 seconds
+[2026-08-03T15:45:36.716+0000] {processor.py:186} INFO - Started process (PID=213) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:45:36.741+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:45:36.809+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:45:36.804+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:45:36.995+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:45:36.917+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:45:37.011+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:45:37.279+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.677 seconds
+[2026-08-03T15:46:08.166+0000] {processor.py:186} INFO - Started process (PID=244) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:08.171+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:46:08.195+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:46:08.194+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:08.397+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:46:08.305+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:46:08.431+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:08.703+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 0.592 seconds
+[2026-08-03T15:46:39.789+0000] {processor.py:186} INFO - Started process (PID=277) to work on /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:39.803+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/4_XCOMs_auto.py for tasks to queue
+[2026-08-03T15:46:39.909+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:46:39.895+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:40.171+0000] {logging_mixin.py:190} INFO - [2026-08-03T15:46:40.145+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/4_XCOMs_auto.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/4_XCOMs_auto.py", line 1, in <module>
+    from airflow.sdk import dag, task
+ModuleNotFoundError: No module named 'airflow.sdk'
+[2026-08-03T15:46:40.184+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/4_XCOMs_auto.py
+[2026-08-03T15:46:41.183+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/4_XCOMs_auto.py took 1.624 seconds
