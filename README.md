@@ -52,7 +52,7 @@ Tasks execute sequentially, one after another.
 Complex / Branching Flow:
 Tasks run in parallel or dynamically branch based on conditions.
 
-                         ┌───> [Task B1: Process US Data] ───┐
+                          ┌───> [Task B1: Process US Data] ───┐  
                          │                                    │
   [Task A: Ingest Data] ─┤                                    ├─> [Task C: Generate Report]
                          │                                    │
