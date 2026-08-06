@@ -59,19 +59,19 @@ x-airflow-common:
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     
-    # ---> CHANGED: Updated database driver string for Airflow 3 Celery backend
+    # Updated database driver string for Airflow 3 Celery backend
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql+psycopg2://airflow:airflow@postgres/airflow
     
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
 
-    # ---> CHANGED: Added default Fernet Key to prevent cryptography errors
+    # Fernet Key configuration
     AIRFLOW__CORE__FERNET_KEY: ${FERNET_KEY:-46AhO3-3pB21vJ86s9aP3-a1K_X0Y-3pB21vJ86s9aP=}
     
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     
-    # ---> CHANGED: Added default JWT Secrets required by Airflow 3 apiserver
+    # JWT Secrets required by Airflow 3 apiserver
     AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW__API_AUTH__JWT_SECRET:-airflow_jwt_secret_key_316}
     AIRFLOW__API_AUTH__JWT_ISSUER: ${AIRFLOW__API_AUTH__JWT_ISSUER:-airflow}
 
@@ -343,8 +343,4 @@ services:
         condition: service_completed_successfully
 
 volumes:
-<<<<<<< HEAD
   postgres-db-volume:
-=======
-  postgres-db-volume:
->>>>>>> 336b826bd5432c59fadae31463e29bddabbbf431
