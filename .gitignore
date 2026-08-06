@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python-generated files
 __pycache__/
 *.py[oc]
@@ -8,3 +9,56 @@ wheels/
 
 # Virtual environments
 .venv
+=======
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Databases
+*.db
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporary files
+tempCodeRunnerFile.py
+
+# Airflow
+airflow.cfg
+airflow.db
+logs/
+>>>>>>> 336b826bd5432c59fadae31463e29bddabbbf431

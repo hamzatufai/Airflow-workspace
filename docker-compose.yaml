@@ -343,4 +343,8 @@ services:
         condition: service_completed_successfully
 
 volumes:
+<<<<<<< HEAD
   postgres-db-volume:
+=======
+  postgres-db-volume:
+>>>>>>> 336b826bd5432c59fadae31463e29bddabbbf431
